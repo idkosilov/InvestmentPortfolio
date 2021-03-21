@@ -13,6 +13,9 @@ def get_stocks(file: str) -> List[Stock]:
     Парсит информацию об акциях из csv-файла, полученную с сайта YahooFinance.
     Возразает массив акций с параметрами ROI и цены акции.
 
+    !!!Для ускорения вычислений стоимость акций округляется до целого!!!
+
+
     ROI (Return On Investment) = Доход/Сумму инвестиций
     """
     stocks = []
@@ -46,7 +49,6 @@ def get_income(portfolio: Dict) -> float:
 def optimal_portfolio(stocks, budget_of_investment, diversification_ratio):
     """
     Функция вычисляющая оптимальный портфель.
-    !!!Для ускорения вычислений стоимость акций округляется до целого!!!
 
     :param stocks: информация об акциях
     :param budget_of_investment: бюджет
